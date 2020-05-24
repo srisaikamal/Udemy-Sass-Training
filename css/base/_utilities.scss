@@ -1,0 +1,30 @@
+.u-center-text {
+  text-align: center;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important;
+}
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important;
+
+  @include mediamgr(phone) {
+    margin-bottom: 3rem !important;
+  }
+}
+
+.u-margin-big {
+  margin-bottom: 8rem;
+
+  @include mediamgr(phone) {
+    margin-bottom: 5rem !important;
+  }
+}
+
+.u-margin-huge {
+  margin-bottom: 5rem;
+
+  @include mediamgr(phone) {
+    margin-bottom: 3rem !important;
+  }
+}

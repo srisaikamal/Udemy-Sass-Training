@@ -1,0 +1,67 @@
+@mixin clearFix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+@mixin absolutecenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Responsive media queries
+/*
+0 - 600px: phone
+600 - 900px: tab portrait
+900 - 1200px:  tab landscape
+1200 - 1800px: normal styles
+1800: big desktop
+
+
+
+Media Manager 
+
+- Phone
+- Tab-port
+- Tab-land
+- Big-desktop
+
+
+
+
+ORDER: Base + typography > general layout + grid > page layout > component
+
+*/
+
+@mixin mediamgr($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      //37.5em is 600px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      //56.25em is 900px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      //75em is 1200px
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    @media (max-width: 112.5em) {
+      //112.5em is 1800px
+      @content;
+    }
+  }
+}

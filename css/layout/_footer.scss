@@ -1,0 +1,81 @@
+.footer {
+  background-color: $color-grey-dark-4;
+  padding: 3rem 0;
+  font-size: 1.4rem;
+
+  @include mediamgr(tab-land) {
+    padding: 1rem 0;
+  }
+
+  &__logo-box {
+    text-align: center;
+    margin-bottom: 8rem;
+  }
+
+  &__logo {
+    width: 15rem;
+    height: auto;
+    margin-top: 2rem;
+  }
+
+  &__navigation {
+    border-top: 1px solid $color-grey-dark-3;
+    padding-top: 2rem;
+    display: inline-block;
+
+    @include mediamgr(tab-land) {
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    @include mediamgr(phone) {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+  }
+
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+  &__link {
+    &:link,
+    &:visited {
+      color: $color-gray-light-1;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.1s;
+
+      @include mediamgr(tab-land) {
+      }
+    }
+    &:hover,
+    &:active {
+      color: $color-primary;
+      box-shadow: 0 1rem 2rem rgba($color: $color-black, $alpha: 0.4);
+      transform: rotate(5deg) scale(1.3);
+    }
+  }
+
+  &__copyright {
+    border-top: 1px solid $color-grey-dark-3;
+    padding-top: 2rem;
+    display: inline-block;
+
+    @include mediamgr(tab-land) {
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    @include mediamgr(phone) {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+  }
+}
